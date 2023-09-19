@@ -1,0 +1,39 @@
+<div class="card" [ngStyle]="{'background-image': 'url(' + chooseWeatherBg() +')'}">
+
+    <!-- <div class="weather-icon">
+
+        <img class="icon" alt="Weather icon" [src]="currentWeather?.icon!!">
+
+    </div> -->
+
+    <div class="weather-location">
+
+        <p class="main">{{currentWeather?.weatherMain}}</p>
+        <p class="description">{{currentWeather?.name}}</p>
+
+    </div>
+
+    <div class="weather-temperature">
+
+        <span class="temperature">{{currentWeather?.currentTempCelsius}}°</span>
+
+    </div>
+
+    <div class="min-max-temperature">
+
+        <div class="min-max-container">
+            <img class="min-icon" src="../assets/img/up-arrow.png" alt="Min icon">
+            <span>{{currentWeather?.minTempCelsius}}°</span>
+        </div>
+
+        <div class="min-max-container">
+            <img class="max-icon" src="../assets/img/up-arrow.png" alt="Max icon">
+            <span>{{currentWeather?.maxTempCelsius}}°</span>
+        </div>
+
+    </div>
+
+    <p>Humidity</p>
+    <span class="humedity">{{currentWeather?.humidity}}%</span>
+
+</div>
